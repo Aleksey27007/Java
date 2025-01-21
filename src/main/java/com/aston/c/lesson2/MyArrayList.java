@@ -82,7 +82,8 @@ public class MyArrayList<T> implements MyList<T>{
     }
 
     /** ensureCapacity() для добавления элемента в нашу коллекцию сперва нужно проверить сможет ли влезть
-     * наш элемент в коллекцию, */
+     * наш элемент в коллекцию, далее в нашем массиве берем последний элемент size и добавляем к нему ++
+     * для указания на следующий элемент и замещаем его на element из параметра (T element) */
     @Override
     public boolean add(T element) {
         ensureCapacity();
