@@ -1,10 +1,10 @@
 package com.aston.c.lesson7;
 
-public class NewThread implements Runnable {
+public class NewThreadRunnable implements Runnable {
 
     Thread t;
 
-    public NewThread() {
+    public NewThreadRunnable() {
         t = new Thread(this, "DemoThread");
         System.out.println("Docherni potok: " + t);
     }
@@ -25,7 +25,7 @@ public class NewThread implements Runnable {
 
 class ThreadDemo {
     public static void main(String[] args) {
-        NewThread nt = new NewThread();
+        NewThreadRunnable nt = new NewThreadRunnable();
         nt.t.start();
 
         try {
